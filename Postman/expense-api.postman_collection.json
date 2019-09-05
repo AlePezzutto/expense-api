@@ -1,0 +1,426 @@
+{
+	"info": {
+		"_postman_id": "18b41e33-6f1c-4b3a-932f-a1cc5576cf89",
+		"name": "expense-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Nova Categoria",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"nome\": \"Combustível\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/categoria",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"categoria"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Categoria",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/categoria/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"categoria",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Categorias",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/categoria",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"categoria"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lista Pessoas",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "84027466-73b1-4b7a-9d95-ea191c88c6f2",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/pessoa/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"pessoa",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Pessoa",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "james",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "jimmy",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/pessoa/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"pessoa",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Nova Pessoa",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"idPessoa\": null,\n    \"nome\": \"Robert Nesta Marley\",\n    \"ativo\": true,\n    \"endereco\": {\n        \"logradouro\": \"Rua Iration\",\n        \"numero\": \"2\",\n        \"complemento\": null,\n        \"bairro\": \"Trenchtown\",\n        \"cep\": \"45678-617\",\n        \"cidade\": \"Kingston\",\n        \"estado\": \"MA\"\n    }\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/pessoa",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"pessoa"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deletar Pessoa",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/pessoa/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"pessoa",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Alterar Pessoa",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"idPessoa\": 1,\n    \"nome\": \"Jimmy James\",\n    \"ativo\": true,\n    \"endereco\": {\n        \"logradouro\": \"Rua Esdras Prates da Silveira\",\n        \"numero\": \"219\",\n        \"complemento\": null,\n        \"bairro\": \"Presidente Altino\",\n        \"cep\": \"06270-020\",\n        \"cidade\": \"Osasco\",\n        \"estado\": \"SP\"\n    }\n}\n"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/pessoa/12",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"pessoa",
+						"12"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Alterar Pessoa Ativo",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "true"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/pessoa/23/ativo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"pessoa",
+						"23",
+						"ativo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Novo Lançamento",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"codigo\": null,\n    \"descricao\": \"Honorários\",\n    \"dataVencimento\": \"2019-08-18\",\n    \"dataPagamento\": \"2019-08-20\",\n    \"valor\": 7854.67,\n    \"observ\": \"Entrega do sistema\",\n    \"tipoLancto\": \"RECEITA\",\n    \"categoria\": {\n        \"codigo\": 50\n    },\n    \"pessoa\": {\n        \"idPessoa\": 3\n    }\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/lancamento",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"lancamento"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/v1/lancamento?dataVenctoDe=2019-08-01&dataVenctoAte=2019-08-10",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "admin",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/lancamento?dataVenctoDe=2019-08-01&dataVenctoAte=2019-08-10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"lancamento"
+					],
+					"query": [
+						{
+							"key": "dataVenctoDe",
+							"value": "2019-08-01"
+						},
+						{
+							"key": "dataVenctoAte",
+							"value": "2019-08-10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtem token",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "Buceta",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "Angular",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "client",
+							"value": "Angular",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "admin",
+							"type": "text"
+						},
+						{
+							"key": "grant_type",
+							"value": "password",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/oauth/token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"oauth",
+						"token"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
